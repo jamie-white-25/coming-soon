@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Chelsea+Market&display=swap');
+.navbar-brand{
+    font-family: 'Chelsea Market', cursive;
+}
+
+.nav-red{
+    background-color: #ef5350 !important;
+}
+
+.get-btn{
+    color:#ef5350 !important;
+    border-color:#ef5350 !important;
+}
+
+.get-btn:hover{
+    color:white !important;
+    background-color:#ef5350 !important;
+}
