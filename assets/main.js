@@ -28,17 +28,6 @@ const creatPokemonlist = (PokemonArray) => {
         data += '<div class="spinner-border text-success mx-auto p-3 my-5" role="status">';        
         data +=  '<span class="sr-only">Loading...</span>';
         data += '</div>';
-        // data += '<div class="card-body">';
-        // data += '<img class="card-img-top" alt="...">';
-        // data += '<h5 class="card-title text-center">'+ pokemon.name +'</h5>';
-        // data += '<p class="card-text"></p>';
-        // data += '<div class="d-flex justify-content-between align-items-center">';
-        // data += '<div class="btn-group">';
-        // data += '<button type="button" class="btn btn-sm btn-outline-secondary">View</button>';
-        // data += '<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>';
-        // data += '</div>';
-        // data += '</div>';
-        // data += '</div>';
         data += '</div>';
         data += '</div>';
     })
