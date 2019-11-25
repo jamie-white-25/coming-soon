@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Chelsea+Market&display=swap');
+.navbar-brand{
+    font-family: 'Chelsea Market', cursive;
+}
+
+.chelsea-market{
+    font-family: 'Chelsea Market', cursive;
+}
+
+.text-red{
+    color: #ef5350;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-red{
+    background-color: #ef5350 !important;
+}
+
+.get-btn{
+    color:#ef5350 !important;
+    border-color:#ef5350 !important;
+}
+
+.get-btn:hover{
+    color:white !important;
+    background-color:#ef5350 !important;
+}
+
+.placeholder > .card{
+    height: 193px;
+}
+img.img-fluid{
+    height: 96px;
+}
+
+.bg-pokemon{
+    border: 0px solid #ecf0f1 !important;
+}
+
+.bg-pokemon:hover{
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important;
+    border-width: 1px !important;
+    transition: all ease-in 0.1s;
+
+}
