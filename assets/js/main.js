@@ -23,7 +23,7 @@ const creatPokemonlist = (PokemonArray) => {
         // data += '<div class="col-md-4"><div class="card text-center" id="'+ pokemon.name +'">'+ pokemon.name +'</div></div>';
         let pokemonData = getAllData(pokemon.name);
         console.log(pokemonData);
-        data += '<div class="col-md-4 px-4">';
+        data += '<div class="col-md-4 col-10 mx-auto px-4">';
         data += '<div class="card mb-4 shadow" id="'+pokemon.name+'">';
         data += '<div class="spinner-border text-success mx-auto p-3 my-5" role="status">';        
         data +=  '<span class="sr-only">Loading...</span>';
