@@ -34,10 +34,11 @@
 }
 img.img-fluid{
     height: 96px;
+    width: 96px;
 }
 
 .bg-pokemon{
-    border: 0px solid #ecf0f1 !important;
+    border: 1px solid rgba(0,0,0,0); !important;
 }
 
 .bg-pokemon:hover{

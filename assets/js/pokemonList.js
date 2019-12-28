@@ -1,11 +1,22 @@
+
 let pokemonArrayNameUrl = [];
 let pokemonAllDataList = [];
+let numPokemon = 151;
 
-let getPokemon = async () => {
-    await axios.get("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
+let getPokemon = async (limit, offset) => {
+    await axios.get("https://pokeapi.co/api/v2/pokemon",{
+        params: {
+            limit,
+            offset, 
+          }
+        })
         .then(function (response) {
             // handle success
+            console.log(response);
             let resultsArray = response.data.results;
+            pokemonArrayNameUrl['count'] = response.data.count;
+            pokemonArrayNameUrl['next'] = response.data.next;
+            console.log(pokemonArrayNameUrl['next']);
             resultsArray.forEach(pokemon => {
                 pokemonArrayNameUrl[pokemon.name] = pokemon.name;
                 getAllPokemonData(pokemon);
@@ -15,7 +26,7 @@ let getPokemon = async () => {
         .catch(function (error) {
             // handle error
             console.log(error);
-        });
+        });        
 }
 
 let getAllPokemonData = async (pokemon)=>{
@@ -60,4 +71,25 @@ let loadCardPlaceHolder = (pokemonName)=>{
     return;    // Append <li> to <ul> with id="myList" 
 }
 
-window.onload = getPokemon();
+const SetPokemonLimit = (pokemonNumber, offset)=>{
+    // getPokemon(pokemonNumber, offset);
+};
+
+let gen1 = document.querySelector('#gen1');
+let gen2 = document.querySelector('#gen2');
+let gen3 = document.querySelector('#gen3');
+let gen4 = document.querySelector('#gen4');
+let gen5 = document.querySelector('#gen5');
+let gen6 = document.querySelector('#gen6');
+let gen6 = document.querySelector('#class');
+
+gen1.addEventListener('click', ()=> {getPokemon(151,0); gen1.style.display = "none"; });
+gen2.addEventListener('click', ()=> {getPokemon(100,151); gen2.style.display = "none";});
+gen3.addEventListener('click', ()=> {getPokemon(135,251); gen3.style.display = "none";});
+gen4.addEventListener('click', ()=> {getPokemon(107,386); gen4.style.display = "none";});
+gen5.addEventListener('click', ()=> {getPokemon(156,493); gen5.style.display = "none";});
+gen6.addEventListener('click', ()=> {getPokemon(494,649); gen6.style.display = "none";});
+
+gen6.addEventListener('click', ()=> {});
+
+// window.onload = getPokemon();
